@@ -15,7 +15,11 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Anek+Malayalam:wght@200&family=Cinzel:wght@500&family=Comfortaa:wght@300;400;500;700&family=Cormorant+Infant:wght@300&family=Cuprum&family=Encode+Sans:wght@300&family=Festive&family=Great+Vibes&family=Gwendolyn:wght@700&family=Jura&family=Kurale&family=Lato:wght@300&family=Lobster&family=Lobster+Two&family=Londrina+Outline&family=M+PLUS+Rounded+1c:wght@300&family=Meow+Script&family=Montserrat+Alternates:wght@200&family=Montserrat:wght@500&family=Parisienne&family=Philosopher:ital@1&family=Poppins:wght@500&family=Roboto:wght@100;300;400&family=Sacramento&family=Tourney:wght@500&family=Yanone+Kaffeesatz:wght@400;500&display=swap" rel="stylesheet">
+    
+<!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -29,6 +33,19 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <div class="waveWrapper waveAnimation">
+      <div class="waveWrapperInner bgTop">
+        <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgMiddle">
+        <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgBottom">
+        <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+      </div>
+    </div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -1,38 +1,188 @@
+
+
+
 .App {
   text-align: center;
+  margin-top:  90px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  position:relative;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 20;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ff1361;
+  position: relative;
+  z-index: 20;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #FEDB39;
+  position: relative;
+  z-index: 20;
+  border:2px solid #fff;
+  padding: 20px 15px;
+  width: 50%;
+}
+
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.arrow-7 {
+  margin: 40px auto 10px auto;
+  width: 38px;
+  height: 100px;
+  position: relative;
+  z-index: 20;
+}
+.arrow-7 span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #ff1361;
+  border-right: 5px solid #ff1361;
+  transform: rotate(45deg);
+  margin: -16px 0;
+  animation: arrow-7 2s infinite;
+}
+.arrow-7 span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow-7 span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes arrow-7 {
+  0%{
+      opacity: 0;
+      transform: translate(0,-20px) rotate(45deg);
   }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: translate(0,20px) rotate(45deg);
+  }
+}
+
+
+button {
+  position: relative;
+  z-index: 20;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px ;
+}
+
+
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #1CD6CE 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+
+@keyframes textclip {
   to {
-    transform: rotate(360deg);
+    background-position: 200% center;
   }
+}
+
+
+
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-15%) translateZ(0) scaleY(0.55)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 30% 100px;
+}
+.waveAnimation .waveTop {
+animation: move-wave 3s;
+ -webkit-animation: move-wave 3s;
+ -webkit-animation-delay: 1s;
+ animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
 }
