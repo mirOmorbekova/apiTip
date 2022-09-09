@@ -186,3 +186,19 @@ animation: move-wave 3s;
 .waveAnimation .waveBottom {
   animation: move_wave 15s linear infinite;
 }
+
+@media all and (max-width:800px) {
+
+  .App {
+    margin-top: 40px;
+  }
+}
+
+
+@media all and (max-width:500px) {
+
+  .App {
+    margin-top: 20px;
+  }
+}
+
