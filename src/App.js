@@ -8,7 +8,7 @@ function App() {
   const [tips, setTips] = useState("");
 
     const fetchTips = async () => {
-    const response = await fetch("http://www.boredapi.com/api/activity/");
+    const response = await fetch("http://www.boredapi.com/api/activity?minparticipants=5&maxparticipants=8");
     const data = await response.json();
     setTips(data.activity);
     };
