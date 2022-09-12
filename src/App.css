@@ -192,6 +192,18 @@ animation: move-wave 3s;
   .App {
     margin-top: 40px;
   }
+
+  p {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
 }
 
 
@@ -199,6 +211,18 @@ animation: move-wave 3s;
 
   .App {
     margin-top: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
   }
 }
 
