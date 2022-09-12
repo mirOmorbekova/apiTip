@@ -5,12 +5,13 @@ import { useState } from 'react';
 
 function App() {
 
-  const [tips, setTips] = useState("");
+  const [advice, setTips] = useState("");
 
     const fetchTips = async () => {
-    const response = await fetch("https://www.boredapi.com/api/activity?minparticipants=5&maxparticipants=8");
+    const response = await fetch("https://api.adviceslip.com/advice");
     const data = await response.json();
-    setTips(data.activity);
+    setTips(data.slip.advice);
+    console.log(data.slip.advice);
     };
 
     useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
         return (
     <div className="App">
       <div>
-        <h1 className='animate-charcter'>Don't know what to do?</h1>
+        <h1 className='animate-charcter'>If you need advice?</h1>
       </div>
       <div>
       <h2>Then click the button!</h2>
@@ -36,7 +37,7 @@ function App() {
       <button className='animate-charcter' onClick={fetchTips}>New Tip</button>
       </div>
       <div className='container'>
-      <p> - {tips} - </p>
+      <p> - {advice} - </p>
       </div>
     </div>
     );
