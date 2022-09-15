@@ -11,7 +11,6 @@ function App() {
     const response = await fetch("https://api.adviceslip.com/advice");
     const data = await response.json();
     setTips(data.slip.advice);
-    console.log(data.slip.advice);
     };
 
     useEffect(() => {
